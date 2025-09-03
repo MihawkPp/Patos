@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.udistrital.FlyBehavior;
 
 /**
@@ -15,6 +11,6 @@ public class FlyRocketPowered implements FlyBehavior{
     
     @Override
     public void fly() {
-        System.out.println("Fly Rocket Powered");
+        System.out.println("This Duck Flies Rocket Powered");
     }
 }

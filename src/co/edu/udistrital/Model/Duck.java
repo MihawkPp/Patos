@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.udistrital.Model;
 import co.edu.udistrital.FlyBehavior.FlyBehavior;
 import co.edu.udistrital.FlyBehavior.FlyWithWings;
@@ -27,13 +23,39 @@ public abstract class Duck {
         System.out.println("All ducks can swim normally");
     }
     
-    public void performFly() {
-        flyBehavior = new FlyWithWings();
+    /**
+     * Esta función va a activar el metodo fly() para todos los patos hijos
+     * depende entonces de como se instancie en cada uno el comportamiento 
+     * adecuado utilizando sustitucion de liskov
+     */
+    public void performFly() { 
         flyBehavior.fly();
     }
-
+    
+    /**
+     * Esta función va a activar el metodo fly() para todos los patos hijos
+     * depende entonces de como se instancie en cada uno el comportamiento 
+     * adecuado utilizando sustitucion de liskov
+     */
     public void performQuack() {
-        quackBehavior = new Quack();
         quackBehavior.quack();
+    }
+    
+    /**
+     * Este metodo set nos permite cambiar el comportamiento de vuelo en tiempo
+     * de ejecucion
+     * @param fb Este parametro recibe el nuevo tipo de comportamiento
+     */
+    public void setFlyBehavior(FlyBehavior fb) {
+        this.flyBehavior = fb;
+    }
+    
+    /**
+     * Este metodo set nos permite cambiar el comportamiento de sonido en tiempo
+     * de ejecucion
+     * @param qb Este parametro recibe el nuevo tipo de comportamiento
+     */
+    public void setQuackBehavior(QuackBehavior qb) {
+        this.quackBehavior = qb;
     }
 }

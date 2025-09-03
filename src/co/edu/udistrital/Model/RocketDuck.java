@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.udistrital.Model;
 
 import co.edu.udistrital.FlyBehavior.FlyRocketPowered;
@@ -15,21 +11,13 @@ public class RocketDuck extends Duck{
     
     public RocketDuck() {
         super();
+        flyBehavior = new FlyRocketPowered();
+        quackBehavior = new Quack();
     }
 
     @Override
     public void display() {
-        
+        System.out.println("I'm a Rocket Duck");
     }
     
-    public void performFly() {
-        flyBehavior = new FlyRocketPowered();
-        flyBehavior.fly();
-    }
-
-    public void performQuack() {
-        quackBehavior = new Quack();
-        quackBehavior.quack();
-        
-    }
 }
